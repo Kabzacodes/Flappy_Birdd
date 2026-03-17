@@ -63,9 +63,49 @@ namespace Flappy_Birdd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_day {
+            get {
+                object obj = ResourceManager.GetObject("background-day", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gameground {
             get {
                 object obj = ResourceManager.GetObject("gameground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pipe_green {
+            get {
+                object obj = ResourceManager.GetObject("pipe-green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pipe_green_down {
+            get {
+                object obj = ResourceManager.GetObject("Pipe-green down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redbird_upflap {
+            get {
+                object obj = ResourceManager.GetObject("redbird-upflap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -121,4 +121,16 @@
   <data name="gameground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gameground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="redbird-upflap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbird-upflap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pipe-green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pipe-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pipe-green down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pipe-green down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
