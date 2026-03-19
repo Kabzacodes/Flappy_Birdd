@@ -14,7 +14,7 @@ namespace Flappy_Birdd
     public partial class Form1 : Form
     {
         //variables being used in the game
-        int pipeSpeed = 5;
+        int pipeSpeed = 6;
         int gravity = 13;        
         int score = 0;
 
@@ -44,6 +44,7 @@ namespace Flappy_Birdd
 
             if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
                 flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || 
+                flappyBird.Bounds.IntersectsWith(skyLimit.Bounds) ||
                 flappyBird.Bounds.IntersectsWith(ground.Bounds )
                 ) 
                 
@@ -65,7 +66,7 @@ namespace Flappy_Birdd
 
             if(e.KeyCode == Keys.Space)
             { 
-                gravity = -6 ;           //when Space is prerssed, the bird will go up
+                gravity = -9 ;           //when Space is prerssed, the bird will go up
             }
 
         }
