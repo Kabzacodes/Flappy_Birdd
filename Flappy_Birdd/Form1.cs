@@ -17,7 +17,8 @@ namespace Flappy_Birdd
         int pipeSpeed = 6;
         int gravity = 13;        
         int score = 0;
-
+        bool gameOver = false;
+       
 
         public Form1()
         {
@@ -51,6 +52,16 @@ namespace Flappy_Birdd
             {
                endGame();                                     //when the bird hits the pipe, the ground or goes out of the screen, the game will end
             }
+
+            if(score > 10)              //when the score is higher than 10, the speed of the pipe will increase to 8,thus making the game more difficult
+            {
+                pipeSpeed = 8;
+            }
+
+            if(score > 20)              //when the score is higher than 20, the speed of the pipe will increase to 10, thus making the game more difficult
+            {
+                pipeSpeed = 10;
+            }
         }
 
         private void gamekeyisup(object sender, KeyEventArgs e)
@@ -58,7 +69,13 @@ namespace Flappy_Birdd
             if(e.KeyCode == Keys.Space)
             {
                 gravity = 13;           //when Space is released, the bird will fall down
-            }   
+            }
+
+            if (e.KeyCode == Keys.Enter && gameOver)
+            {
+                 restartGame();            //when Enter is pressed and the game is over, the game will restart
+            }
+
         }
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
@@ -66,7 +83,7 @@ namespace Flappy_Birdd
 
             if(e.KeyCode == Keys.Space)
             { 
-                gravity = -9 ;           //when Space is prerssed, the bird will go up
+                gravity = -9 ;           //when Space is pressed, the bird will go up
             }
 
         }
@@ -74,7 +91,18 @@ namespace Flappy_Birdd
         private void endGame()
         {
             gameTimer.Stop();         //the game will stop when the bird hits the pipe, the ground or goes out of the screen
-            // text"     Game Over!  " + score;     //when the game is over, "Game Over!" will be shown on the screen
+            scoreText.Text = "Score: "+score +" GameOver! Press Enter to retry";
+           gameOver = true;          //the gameOver variable will be true when the game ends
+        }
+
+        private void restartGame()
+        {
+            flappyBird.Location = new Point(100, 150);   //the bird will come back to the original position
+            gameTimer.Start();        //the game will start when Enter is pressed
+            pipeBottom.Left = 800;    //the bottom pipe will come back to the right side of the screen
+            pipeTop.Left = 950;       //the top pipe will come back to the right side of the screen
+            score = 0;               //the score will be reset to 0
+            gameOver = false;        //the gameOver variable will be false when the game restarts
         }
     }
 }
